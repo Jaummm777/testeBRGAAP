@@ -40,11 +40,12 @@ npm install -g http-server
 
 CMD
 npm start,
-
 O Navegador irá abrir automáticamente.
----
 
 Tecnologias utilizadas:
+---
+
+
 
 SAPUI5
 
