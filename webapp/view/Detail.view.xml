@@ -1,0 +1,18 @@
+<mvc:View
+    controllerName="brgaap.app.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    <Page
+        id="detailPage"
+        title="{title}" showNavButton="true"
+        navButtonPress="onNavBack">
+        <content>
+            <VBox class="sapUiContentPadding">
+                <Text text="ID da Tarefa: {id}" class="sapUiSmallMarginBottom" />
+                <Text text="ID do Usuário: {userId}" class="sapUiSmallMarginBottom" />
+                <CheckBox text="Completo" selected="{completed}" editable="false" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

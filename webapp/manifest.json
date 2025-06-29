@@ -1,0 +1,104 @@
+{
+    "_version": "1.12.0",
+
+    "sap.app": {
+        "id": "brgaap.app",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "applicationVersion": {
+            "version": "${version}"
+        },
+        "sourceTemplate": {
+            "id": "generator-ui5-app",
+            "version": "1.1.0"
+        },
+        "dataSources": {
+            "todoService": {
+                "uri": "https://jsonplaceholder.typicode.com/todos",
+                "type": "JSON"
+            }
+        }
+    },
+
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {},
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+
+    "sap.ui5": {
+        "rootView": {
+            "viewName": "brgaap.app.view.Main",
+            "type": "XML",
+            "id": "app",
+            "async": true
+        },
+
+        "dependencies": {
+            "minUI5Version": "1.120.1",
+            "libs": {
+                "sap.ui.core": {},
+                "sap.m": {},
+                "sap.ui.comp": {},
+                "sap.ui.table": {},
+                "sap.ui.unified": {}
+            }
+        },
+
+        "handleValidation": true,
+
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+
+        "models": {
+            "": {
+                "type": "sap.ui.model.json.JSONModel",
+                "dataSource": "todoService",
+                "preload": true
+            }
+        },
+
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "brgaap.app.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "main",
+                    "target": "main"
+                },
+                {
+                    "pattern": "detail/{id}",
+                    "name": "detail",
+                    "target": "detail"
+                }
+            ],
+            "targets": {
+                "main": {
+                    "viewId": "mainPage",
+                    "viewName": "Main",
+                    "viewLevel": 1
+                },
+                "detail": {
+                    "viewId": "detail",
+                    "viewName": "Detail",
+                    "viewLevel": 2
+                }
+            }
+        }
+    }
+}

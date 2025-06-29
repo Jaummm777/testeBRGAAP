@@ -1,0 +1,18 @@
+{
+  "generator-ui5-app": {
+    "namespace": "brgaap.app",
+    "framework": "SAPUI5",
+    "frameworkVersion": "1.120.1",
+    "author": "Joao Vitor",
+    "initrepo": true,
+    "appId": "brgaap.app",
+    "appURI": "brgaap/app",
+    "cdnDomain": "ui5.sap.com",
+    "defaultTheme": "sap_horizon",
+    "qunitCoverageFile": "qunit-coverage-istanbul.js",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "lt1_124_0": true,
+    "setupCompleted": true
+  }
+}

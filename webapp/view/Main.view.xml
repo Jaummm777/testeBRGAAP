@@ -1,0 +1,75 @@
+<mvc:View
+    controllerName="brgaap.app.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+
+    <App id="app">
+        <pages>
+            <Page id="mainPage">
+                <customHeader> <Toolbar>
+                        <Image
+                            src="img/id-br-gaap.png"
+                            alt="Logo BRGAAP"
+                            width="120px"
+                            class="sapUiSmallMarginEnd" /> <ToolbarSpacer/></Toolbar>
+                </customHeader>
+
+                <subHeader>
+                    <Toolbar class="sapUiContentPadding">
+                        <SearchField
+                            id="searchField"
+                            placeholder="Pesquisar..."
+                            width="100%"
+                            liveChange="onSearch"
+                            search="onSearch" />
+                    </Toolbar>
+                </subHeader>
+
+                <content>
+                    <FlexBox
+                        direction="Column"
+                        alignItems="Stretch"
+                        justifyContent="Start"
+                        width="100%"
+                        class="sapUiContentPadding">
+                        
+                        <Table
+                            id="tasksTable"
+                            items="{/}"
+                            noDataText="Nenhuma tarefa encontrada."
+                            class="sapUiNoMargin"
+                            width="auto">
+                            <columns>
+                                <Column width="60%">
+                                    <Text text="Título"/>
+                                </Column>
+                                <Column width="20%" hAlign="Center">
+                                    <Text text="Completo"/>
+                                </Column>
+                                <Column width="20%" hAlign="Center">
+                                    <Text text="Detalhes"/>
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Active" press="onItemPress">
+                                    <cells>
+                                        <Text text="{title}"/>
+                                        <CheckBox selected="{completed}" editable="false"/>
+                                        <HBox justifyContent="Center" alignItems="Center">
+                                            <Button
+                                                icon="sap-icon://sys-enter-2"
+                                                press="onDetailEditPress"
+                                                tooltip="Detalhes / Editar"
+                                                class="sapUiTinyMarginEnd"/>
+                                        </HBox>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </FlexBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
