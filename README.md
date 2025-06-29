@@ -6,19 +6,20 @@ Projeto desenvolvido para o teste técnico da empresa **BRGAAP** utilizando o fr
 
 ## Prints do Projeto
 
+### Tela Inicial
 ![alt text](image.png)
 
-### Tela Inicial
-![Tela Inicial](./prints/tela-inicial.png)
+### Funcionalidade de Pesquisa
+![alt text](image-1.png)
 
-### 🔍 Funcionalidade de Pesquisa
-![Pesquisa](./prints/pesquisa.png)
+### Detalhes da pesquisa
+![alt text](image-2.png)
 
 ---
 
 ## 🧠 Objetivo do Projeto
 
-O objetivo é demonstrar o uso de componentes SAPUI5 como `SearchField`, `Table`, `CheckBox`, e `FlexBox`, integrados com JSON Model para exibir tarefas fictícias.
+Este projeto tem como objetivo demonstrar a construção de uma aplicação SAPUI5 que consome dados de uma API REST externa para exibir uma lista de tarefas. A interface permite pesquisar, visualizar e interagir com os dados recebidos da API de forma organizada e responsiva.
 
 ---
 
