@@ -57,11 +57,12 @@ JSON
 
 FlexBox / MVC Pattern
 
+✍️ Autor
 ---
 
-✍️ Autor
 João Vitor Ferraz – @Jaummm777
 
----
 📝 Licença
+---
+
 Este projeto é apenas para fins de teste técnico. Direitos reservados ao autor.
